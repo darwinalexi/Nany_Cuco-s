@@ -1,0 +1,467 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Documentacion </title>
+</head>
+<body>
+    <h2>Documentación del Endpoins</h2>
+
+
+    <h2>AUTENTICACIÓN</h2>
+    <table>
+        <tr>
+            <th colspan="2">Endpoint de Autenticacion </th>
+        </tr>
+        <tr>
+            <td><b>Requerimiento</b></td>
+            <td>N°1</td>
+        </tr>
+        <tr>
+            <td><b>Nombre del servicio</b></td>
+            <td>Login</td>
+        </tr>
+        <tr>
+            <td><b>URL</b></td>
+            <td><code>/Login </code></td>
+        </tr>
+        <tr>
+            <td><b>Descripción</b></td>
+            <td>Se ingresa el usuario y clave para que se loguie exitosamente.</td>
+        </tr>
+        <tr>
+            <td><b>Verbo HTTPS</b></td>
+            <td><code>POST</code></td>
+        </tr>
+        <tr>
+            <td><b>HEADER</b></td>
+            <td>NULL</td>
+        </tr>
+        <tr>
+            <td><b>Usuarios</b></td>
+            <td>NULL</td>
+        </tr>
+        <tr>
+            <td><b>Petición BODY</b></td>
+            <td>
+                <pre><code>{
+    "usuario": "3456897",
+    "password": "89789789"
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Respuesta JSON</b></td>
+            <td>
+                <b>Correcto:</b>
+                <pre><code>si esta bien las credenciales se debe dejar ingresar al sistema e lo contrario  no lo dejaa y mostrarar una advertencia</code></pre>
+                <b>Error:</b>
+                <pre><code>res.status(500).json({
+    "mensaje": error
+});</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Programador</b></td>
+            <td>Darwin Guerrero</td>
+        </tr>
+    </table>
+
+
+    <h2>Administrador(a)</h2>
+     <h3>PRODUCTOS</h3>
+    <table>
+        <tr>
+            <th colspan="2">Endpoint de prpductos disponibles </th>
+        </tr>
+        <tr>
+            <td><b>Requerimiento</b></td>
+            <td>N°2</td>
+        </tr>
+        <tr>
+            <td><b>Nombre del servicio</b></td>
+            <td>Listar los productos disponibles</td>
+        </tr>
+        <tr>
+            <td><b>URL</b></td>
+            <td><code>/productos_disponibles </code></td>
+        </tr>
+        <tr>
+            <td><b>Descripción</b></td>
+            <td>Se listara todos los productos que estan en estado disponible</td>
+        </tr>
+        <tr>
+            <td><b>Verbo HTTPS</b></td>
+            <td><code>GET</code></td>
+        </tr>
+        <tr>
+            <td><b>HEADER</b></td>
+            <td>Token</td>
+        </tr>
+        <tr>
+            <td><b>Usuarios</b></td>
+            <td>Admiistrador(a)</td>
+        </tr>
+        <tr>
+            <td><b>Petición BODY</b></td>
+            <td>
+                <pre><code>NULL</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Respuesta JSON</b></td>
+            <td>
+                <b>Correcto:</b>
+                <pre><code>SI hay datos de productos disponible los mostrara junto con un estado 200</code></pre>
+                <b>Si no hay :</b>
+                <pre><code> res.status(404).json({
+                    "mensaje":"no hay productos registrados"
+                })</code></pre>
+                <b>Error:</b>
+                <pre><code>
+                    res.status(500).json({
+                        "mensaje" : error
+                        })
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Programador</b></td>
+            <td>Darwin Guerrero</td>
+        </tr>
+    </table>
+
+<br>
+    <table>
+        <tr>
+            <th colspan="2">Endpoint de listar productos no disponiles </th>
+        </tr>
+        <tr>
+            <td><b>Requerimiento</b></td>
+            <td>N°2</td>
+        </tr>
+        <tr>
+            <td><b>Nombre del servicio</b></td>
+            <td>Listar los productos no disponibles</td>
+        </tr>
+        <tr>
+            <td><b>URL</b></td>
+            <td><code>/productos_no_diponibles </code></td>
+        </tr>
+        <tr>
+            <td><b>Descripción</b></td>
+            <td>Se listara todos los productos que estan en estado disponible</td>
+        </tr>
+        <tr>
+            <td><b>Verbo HTTPS</b></td>
+            <td><code>GET</code></td>
+        </tr>
+        <tr>
+            <td><b>HEADER</b></td>
+            <td>Token</td>
+        </tr>
+        <tr>
+            <td><b>Usuarios</b></td>
+            <td>Admiistrador(a)</td>
+        </tr>
+        <tr>
+            <td><b>Petición BODY</b></td>
+            <td>
+                <pre><code>NULL</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Respuesta JSON</b></td>
+            <td>
+                <b>Correcto:</b>
+                <pre><code>SI hay datos de productos disponible los mostrara junto con un estado 200</code></pre>
+                <b>Si no hay :</b>
+                <pre><code> res.status(404).json({
+                    "mensaje":"no hay productos registrados"
+                })</code></pre>
+                <b>Error:</b>
+                <pre><code>
+                    res.status(500).json({
+                        "mensaje" : error
+                        })
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Programador</b></td>
+            <td>Darwin Guerrero</td>
+        </tr>
+    </table>
+
+    <h3>PEDIDOS</h3>
+
+
+    <table>
+        <tr>
+            <th colspan="2">Endpoint de crear pedidos </th>
+        </tr>
+        <tr>
+            <td><b>Requerimiento</b></td>
+            <td>N°3</td>
+        </tr>
+        <tr>
+            <td><b>Nombre del servicio</b></td>
+            <td>Crear pedidos</td>
+        </tr>
+        <tr>
+            <td><b>URL</b></td>
+            <td><code>/pedidos</code></td>
+        </tr>
+        <tr>
+            <td><b>Descripción</b></td>
+            <td>Se debera enviar una peticion al backend con los datos que se requiren para crear un pedido</td>
+        </tr>
+        <tr>
+            <td><b>Verbo HTTPS</b></td>
+            <td><code>POST</code></td>
+        </tr>
+        <tr>
+            <td><b>HEADER</b></td>
+            <td>Token</td>
+        </tr>
+        <tr>
+            <td><b>Usuarios</b></td>
+            <td>Admiistrador(a)</td>
+        </tr>
+        <tr>
+            <td><b>Petición BODY</b></td>
+            <td>
+                <pre><code>{
+                "nombre_producto":"jeans",
+                "referncia":45,
+                "fecha_pedido":"2023-09-05",
+                "observaciones":"null",
+                "celular":3127899056,
+                "persona":"koko",
+                "estado":"por entregar",
+                "usuario":234567,
+                "cantidad"3,
+                }
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Respuesta JSON</b></td>
+            <td>
+                <b>Correcto:</b>
+                <pre><code> res.status(200).json({
+                    "mensaje":" se creo el pedido con exito"
+                })</code></pre>
+                <b>Si no se pudo crear :</b>
+                <pre><code> res.status(404).json({
+                    "mensaje":"no se pudo crear el pedido"
+                  }) </code></pre>
+                <b>Error:</b>
+                <pre><code>
+                    res.status(500).json({
+                        "mensaje" : error
+                        })
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Programador</b></td>
+            <td>Darwin Guerrero</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="2">Endpoint de Actualizar Pedido </th>
+        </tr>
+        <tr>
+            <td><b>Requerimiento</b></td>
+            <td>N°4</td>
+        </tr>
+        <tr>
+            <td><b>Nombre del servicio</b></td>
+            <td>Actualizar pedido</td>
+        </tr>
+        <tr>
+            <td><b>URL</b></td>
+            <td><code>/pedidos/id</code></td>
+        </tr>
+        <tr>
+            <td><b>Descripción</b></td>
+            <td>Se debera enviar una peticion al backend con los datos que se requiren para actualizar un pedido</td>
+        </tr>
+        <tr>
+            <td><b>Verbo HTTPS</b></td>
+            <td><code>PUT</code></td>
+        </tr>
+        <tr>
+            <td><b>HEADER</b></td>
+            <td>Token</td>
+        </tr>
+        <tr>
+            <td><b>Usuarios</b></td>
+            <td>Admiistrador(a)</td>
+        </tr>
+        <tr>
+            <td><b>Petición BODY</b></td>
+            <td>
+                <pre><code>{
+                "nombre_producto":"jeans",
+                "referncia":45,
+                "fecha_pedido":"2023-09-05",
+                "observaciones":"null",
+                "celular":3127899056,
+                "persona":"koko",
+                "estado":"por entregar",
+                "usuario":234567,
+                "cantidad"3,
+                }
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Respuesta JSON</b></td>
+            <td>
+                <b>Correcto:</b>
+                <pre><code>   res.status(200).json({
+                    "mensaje": "Se actualizó el pedido con éxito"
+                });</code></pre>
+                <b>Si no se pudo Actualizat :</b>
+                <pre><code> res.status(404).json({
+                    "mensaje": "No se pudo actualizar el pedido"
+                });</code></pre>
+                <b>Error:</b>
+                <pre><code>
+                        res.status(500).json({ "error": error.message });
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Programador</b></td>
+            <td>Darwin Guerrero</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="2">Endpoint de Eliminar Pedido </th>
+        </tr>
+        <tr>
+            <td><b>Requerimiento</b></td>
+            <td>N°5</td>
+        </tr>
+        <tr>
+            <td><b>Nombre del servicio</b></td>
+            <td>Eliminar pedido</td>
+        </tr>
+        <tr>
+            <td><b>URL</b></td>
+            <td><code>/pedidos/id</code></td>
+        </tr>
+        <tr>
+            <td><b>Descripción</b></td>
+            <td>Se debera enviar el id del pedido mediante la url para borrar un pedido</td>
+        </tr>
+        <tr>
+            <td><b>Verbo HTTPS</b></td>
+            <td><code>delete</code></td>
+        </tr>
+        <tr>
+            <td><b>HEADER</b></td>
+            <td>Token</td>
+        </tr>
+        <tr>
+            <td><b>Usuarios</b></td>
+            <td>Admiistrador(a)</td>
+        </tr>
+        <tr>
+            <td><b>Petición BODY</b></td>
+            <td>
+                <pre><code>NULL</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Respuesta JSON</b></td>
+            <td>
+                <b>Correcto:</b>
+                <pre><code>    res.status(200).json({
+                    "mensaje":"se elimino exitosamente el pedido"
+                    })</pre>code></pre>
+                <b>Si no se pudo Actualizat :</b>
+                <pre><code> res.status(404).json({
+                    "mensaje":"no se elimino el pedido"
+                });</code></pre>
+                <b>Error:</b>
+                <pre><code>
+                        res.status(500).json({ "error": error.message });
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Programador</b></td>
+            <td>Darwin Guerrero</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="2">Endpoint de Listar </th>
+        </tr>
+        <tr>
+            <td><b>Requerimiento</b></td>
+            <td>N°6</td>
+        </tr>
+        <tr>
+            <td><b>Nombre del servicio</b></td>
+            <td>listar pedidoa</td>
+        </tr>
+        <tr>
+            <td><b>URL</b></td>
+            <td><code>/pedidos</code></td>
+        </tr>
+        <tr>
+            <td><b>Descripción</b></td>
+            <td>Se debera  listar los pedidos</td>
+        </tr>
+        <tr>
+            <td><b>Verbo HTTPS</b></td>
+            <td><code>GET</code></td>
+        </tr>
+        <tr>
+            <td><b>HEADER</b></td>
+            <td>Token</td>
+        </tr>
+        <tr>
+            <td><b>Usuarios</b></td>
+            <td>Admiistrador(a)</td>
+        </tr>
+        <tr>
+            <td><b>Petición BODY</b></td>
+            <td>
+                <pre><code>NULL</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Respuesta JSON</b></td>
+            <td>
+                <b>Correcto:</b>
+                <pre><code> res.status(200).json(show)</code></pre>
+                <b>Si no se pudo listar :</b>
+                <pre><code> res.status(404).json({
+                    "mensaje":"no hay registros"
+                });</code></pre>
+                <b>Error:</b>
+                <pre><code>
+                        res.status(500).json({ "error": error.message });
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Programador</b></td>
+            <td>Darwin Guerrero</td>
+        </tr>
+    </table>
+</body>
+</html

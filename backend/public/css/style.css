@@ -1,0 +1,40 @@
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: gray 6px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+        h3{
+            font-family: sans-serif 'Times New Roman', Times, serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #dc2e63;
+            color: white;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        code {
+            background: #e8e8e8;
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: block;
+        }
