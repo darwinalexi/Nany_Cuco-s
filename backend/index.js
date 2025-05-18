@@ -10,7 +10,7 @@ import {router_order  }from"./src/routes/router.orders.js";
 import { router_venta } from "./src/routes/router.sales.js";
 const server = express();
 
-const port = 3333;
+const port = process.env.PORT || 3333;
 
 server.get('/', (req, res) =>{
     res.send('Hola mundo')
