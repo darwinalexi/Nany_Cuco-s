@@ -20,9 +20,9 @@ const port = process.env.PORT || 3333;
 
 //server.use(express.static('public'));
 
-//server.use(cors())
-//server.use(body_parser.json())
-//server.use(body_parser.urlencoded({extended:false}))
+server.use(cors())
+server.use(body_parser.json())
+server.use(body_parser.urlencoded({extended:false}))
 
 //configuracion de rutas
 //server.use(rutaaut)
