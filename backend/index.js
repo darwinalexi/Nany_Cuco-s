@@ -34,7 +34,8 @@ server.listen(port, ()=>{
     console.log("servidor corriendo en el puerto "+port)
 })
 
-server.set("view  engine", "ejs")
+
+server.set("view engine", "ejs") // <-- tiene dos espacios en "view  engine"
 server.set("views", "./view/")
 server.get("/document", (req, res) => {
   res.render("document.ejs")
