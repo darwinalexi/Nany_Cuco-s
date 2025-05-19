@@ -12,7 +12,7 @@ import { router_venta } from "./src/routes/router.sales.js";
 
 const server = express();
 
-const port = process.env.PORT ||  20021;
+const port =  20021;
 
 server.get('/', (req, res) =>{
    res.send('Hola mundo')
