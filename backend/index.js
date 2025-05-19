@@ -32,9 +32,10 @@ server.use(router_order)
 server.use(router_client)
 server.use(router_venta)
 
-server.get('/', (req, res) => {
-  res.send('Servidor funcionando desde Railway 🚀');
+server.get('/', (_, res) => {
+  res.send('OK');
 });
+
 
 server.listen(port, '0.0.0.0', () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
