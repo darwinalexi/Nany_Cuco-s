@@ -12,15 +12,12 @@ import { router_venta } from "./src/routes/router.sales.js";
 
 const server = express();
 
-const port = process.env.PORT ?? 3333;
+const port = process.env.PORT || 3333;
 
-server.get('/', (req, res) =>{
-   res.send('Hola mundo')
-})
 
-server.use(express.static('public'));
+//server.use(express.static('public'));
 
-server.use(cors())
+{/**server.use(cors())
 server.use(body_parser.json())
 server.use(body_parser.urlencoded({extended:false}))
 
@@ -42,4 +39,8 @@ server.set("view  engine", "ejs")
 server.set("views", "./view/")
 server.get("/document", (req, res) => {
   res.render("document.ejs")
-})
+}) */} 
+
+server.get('/', (req, res) => {
+  res.status(200).send('Server is healthy');
+});
