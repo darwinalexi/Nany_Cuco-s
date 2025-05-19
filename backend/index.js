@@ -12,7 +12,7 @@ import { router_venta } from "./src/routes/router.sales.js";
 
 const server = express();
 
-const port = process.env.PORT || 3333;
+const port = process.env.PORT ||  20021;
 
 server.get('/', (req, res) =>{
    res.send('Hola mundo')
@@ -36,8 +36,8 @@ server.get('/', (req, res) => {
   res.send('Servidor funcionando desde Railway 🚀');
 });
 
-server.listen(port, () => {
-  console.log(`Servidor corriendo en el puerto ${port}`);
+server.listen(port, '0.0.0.0', () => {
+    console.log(`Servidor corriendo en el puerto ${port}`);
 });
 
 
