@@ -1,13 +1,13 @@
 import express from "express";
 import body_parser from 'body-parser'
 import cors from'cors';
-import { rutaaut } from "./src/routes/autentication.js";
+{/*import { rutaaut } from "./src/routes/autentication.js";
 import productos from './src/routes/productos_routes.js'
 import { router_of_user } from "./src/routes/user.router.js";
 import { validarToken } from "./src/controller/atutentication.js";
 import {router_client }from"./src/routes/router_client.js"
 import {router_order  }from"./src/routes/router.orders.js";
-import { router_venta } from "./src/routes/router.sales.js";
+import { router_venta } from "./src/routes/router.sales.js";*/}
 
 
 const server = express();
@@ -17,10 +17,10 @@ const port = process.env.PORT || 3333;
 
 //server.use(express.static('public'));
 
-{/**server.use(cors())
+server.use(cors())
 server.use(body_parser.json())
 server.use(body_parser.urlencoded({extended:false}))
-
+{/*
 //configuracion de rutas
 server.use(rutaaut)
 server.use( productos)
