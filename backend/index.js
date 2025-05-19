@@ -36,7 +36,7 @@ server.get('/', (req, res) => {
   res.send('Servidor funcionando desde Railway 🚀');
 });
 
-server.listen(port, '0.0.0.0', () => {
+server.listen(port, () => {
     console.log(`Servidor corriendo en el puerto ${port}`);
 });
 
